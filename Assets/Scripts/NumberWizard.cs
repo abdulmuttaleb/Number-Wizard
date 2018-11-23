@@ -13,28 +13,30 @@ public class NumberWizard : MonoBehaviour {
         Debug.Log("Hello to Number Wizard..");
         Debug.Log("Pick a number, don't tell me what it is...");
         Debug.Log("Choose a number between: "+min+" and: "+max);
-        Debug.Log("Tell me if your number is higher orr lower than my guess!");
+        Debug.Log("Tell me if your number is higher or lower than my guess!");
+        Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = Correct");
+        max += 1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Up arrow key was pressed");
+            Debug.Log("Is it higher or lower than... "+guess);
             min = guess;
             guess = (max + min) / 2;
             Debug.Log(guess);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("Down arrow key was pressed!");
+            Debug.Log("Is it higher or lower than... "+guess);
             max = guess;
             guess = (max + min) / 2;
             Debug.Log(guess);
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Enter key was pressed");
+            Debug.Log("I am a genius.");
         }
 	}
 }
