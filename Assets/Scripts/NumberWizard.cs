@@ -5,10 +5,11 @@ using UnityEngine;
 public class NumberWizard : MonoBehaviour {
 
     // Use this for initialization
-    int max, min;
+    int max, min, guess;
 	void Start () {
         max = 1000;
         min = 1;
+        guess = 500;
         Debug.Log("Hello to Number Wizard..");
         Debug.Log("Pick a number, don't tell me what it is...");
         Debug.Log("Choose a number between: "+min+" and: "+max);
@@ -20,10 +21,16 @@ public class NumberWizard : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Debug.Log("Up arrow key was pressed");
+            min = guess;
+            guess = (max + min) / 2;
+            Debug.Log(guess);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("Down arrow key was pressed!");
+            max = guess;
+            guess = (max + min) / 2;
+            Debug.Log(guess);
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
