@@ -2,6 +2,8 @@
 # Unity generated #
 # =============== #
 [Tt]emp/
+[Ee]Modules/
+[Aa]utoSave/
 [Oo]bj/
 [Bb]uild
 /[Bb]uilds/
@@ -11,7 +13,7 @@ sysinfo.txt
 /Assets/AssetStoreTools*
 *.apk
 *.unitypackage
- 
+*.meta
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
