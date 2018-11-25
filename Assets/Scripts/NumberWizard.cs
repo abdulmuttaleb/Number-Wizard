@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class NumberWizard : MonoBehaviour {
 
     // Use this for initialization
@@ -34,7 +35,8 @@ public class NumberWizard : MonoBehaviour {
 
     public void CorrectAnswer() {
         Debug.Log("I am a genius.");
-        StartGame();
+        SceneManager.LoadScene(2);
+       // StartGame();
     }
 
     void NextGuess()
