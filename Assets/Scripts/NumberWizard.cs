@@ -16,7 +16,7 @@ public class NumberWizard : MonoBehaviour {
     {
         max = 1000;
         min = 1;
-        guess = 500;
+        guess = Random.Range(min,max);
         max += 1;
     }
 
@@ -42,6 +42,6 @@ public class NumberWizard : MonoBehaviour {
     void NextGuess()
     { 
         Debug.Log("Is it higher or lower than... " + guess);
-        guess = (max + min) / 2;
+        guess = Random.Range(min,max);
     }
 }
