@@ -16,8 +16,7 @@ public class NumberWizard : MonoBehaviour {
     {
         max = 1000;
         min = 1;
-        guess = Random.Range(min,max);
-        max += 1;
+        NextGuess();
     }
 
 	void Update () {
@@ -25,23 +24,21 @@ public class NumberWizard : MonoBehaviour {
 	}
 
     public void HigherGuess() {
-        min = guess;
+        min = guess + 1;
         NextGuess();
     }
     public void LowerGuess() {
-        max = guess;
+        max = guess -1;
         NextGuess();
     }
 
     public void CorrectAnswer() {
-        Debug.Log("I am a genius.");
         SceneManager.LoadScene(2);
        // StartGame();
     }
 
     void NextGuess()
     { 
-        Debug.Log("Is it higher or lower than... " + guess);
-        guess = Random.Range(min,max);
+        guess = Random.Range(min,max+1);
     }
 }
